@@ -607,3 +607,21 @@ nav#footer p{
 	height:55px;
 	margin-top:-4px;
 }
+.go-top {
+    position: fixed;
+    bottom: 0.75em;
+    right: 0.5em;
+    text-decoration: none;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.25);
+    font-size: 12px;
+    padding: 10px;
+    display: none;
+    margin: 0;
+}
+
+.go-top:hover {
+    background-color: rgba(239, 83, 80, 0.6);
+    color: white;
+    text-decoration: none;
+}

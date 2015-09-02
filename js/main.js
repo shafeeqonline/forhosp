@@ -26,6 +26,43 @@ function main() {
         }
       });
 
+    /* ==============================================
+    Nice scroll
+    =============================================== */
+
+    $("html").niceScroll({
+      mousescrollstep: 70,
+      cursorcolor: "#EF5350",
+      cursorwidth: "6px",
+      cursorborderradius: "10px",
+      cursorborder: "none"
+    });
+
+    // Show or hide the sticky footer button
+            $(window).scroll(function() {
+              if($(window).width() > 767){
+                if ($(this).scrollTop() > 200) {
+                    $('.go-top').fadeIn(500);
+                } else {
+                    $('.go-top').fadeOut(300);
+                }
+              }
+              else{
+                if ($('body').height() - $(this).scrollTop() < 1000) {
+                    $('.go-top').fadeIn(500);
+                } else {
+                    $('.go-top').fadeOut(300);
+                }
+              }
+            });
+
+            // Animate the scroll to top
+            $('.go-top').click(function(event) {
+                event.preventDefault();
+
+                $('html, body').animate({scrollTop: 0}, 300);
+            })
+
     /*====================================
     Show Menu on Book
     ======================================*/
