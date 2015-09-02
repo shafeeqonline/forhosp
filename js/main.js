@@ -39,29 +39,34 @@ function main() {
     });
 
     // Show or hide the sticky footer button
-            $(window).scroll(function() {
-              if($(window).width() > 767){
-                if ($(this).scrollTop() > 200) {
-                    $('.go-top').fadeIn(500);
-                } else {
-                    $('.go-top').fadeOut(300);
-                }
-              }
-              else{
-                if ($('body').height() - $(this).scrollTop() < 1000) {
-                    $('.go-top').fadeIn(500);
-                } else {
-                    $('.go-top').fadeOut(300);
-                }
-              }
-            });
+    $(window).scroll(function() {
+      if($(window).width() > 767){
+        if ($(this).scrollTop() > 200) {
+            $('.go-top').fadeIn(500);
+        } else {
+            $('.go-top').fadeOut(300);
+        }
+      }
+      else{
+        if ($('body').height() - $(this).scrollTop() < 1000) {
+            $('.go-top').fadeIn(500);
+        } else {
+            $('.go-top').fadeOut(300);
+        }
+      }
+    });
 
-            // Animate the scroll to top
-            $('.go-top').click(function(event) {
-                event.preventDefault();
+    // Animate the scroll to top
+    $('.go-top').click(function(event) {
+        event.preventDefault();
 
-                $('html, body').animate({scrollTop: 0}, 300);
-            })
+        $('html, body').animate({scrollTop: 0}, 600);
+    })
+
+    //Close menu on transition
+    $('.nav.navbar-nav.navbar-right a').on('click', function(){
+      $('button.navbar-toggle').trigger('click');
+    })
 
     /*====================================
     Show Menu on Book
