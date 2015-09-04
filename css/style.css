@@ -201,6 +201,7 @@ ul.about-list li span{
 }
 .section-title.center{
 	padding: 30px 0;
+	text-align: center;
 }
 .section-title h2,
 .section-title.center h2{
@@ -305,6 +306,27 @@ img.img-circle.team-img {
 	color: #ffffff;
 }
 
+
+#tf-about i.fa {
+	font-size: 40px;
+	border: 4px solid #EF5350;
+	width: 100px;
+	height: 100px;
+	padding: 27px 25px;
+	margin-bottom: 10px;
+	border-radius: 50%;
+	transition: all 0.5s;
+}
+
+#tf-about i.fa.fa-mobile{
+	font-size: 50px;
+	padding: 20px 25px;
+}
+
+#tf-about .service:hover>i.fa{
+	background: #EF5350;
+	color: #ffffff;
+}
 /* Clients Section */
 #tf-clients{
 	background: url(../img/01.jpg);
@@ -583,6 +605,7 @@ nav#footer p{
 }
 .service{
 	padding: 15px;
+	text-align: center;
 }
 .ourteam{
 	font-size: 18px;
