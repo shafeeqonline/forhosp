@@ -170,3 +170,23 @@ function main() {
 main();
 //Initialize wow
 new WOW().init();
+
+//Submit contact form
+$('#tf-contact form').on('submit', function(e){
+  e.preventDefault();
+  var dataToSend = {};
+  dataToSend.mail = $('#exampleInputEmail1').val();
+  dataToSend.contact = $('input#contact').val();
+  dataToSend.message = $('textarea.form-control').val();
+  $.ajax({
+    method: "GET",
+    url: "mail.php",
+    data: dataToSend
+  })
+  .done(function() {
+    alert( "Message delivered successfully" );
+  })
+  .fail(function() {
+    alert( "error" );
+  })
+})

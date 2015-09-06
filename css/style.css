@@ -648,3 +648,6 @@ nav#footer p{
     color: white;
     text-decoration: none;
 }
+.navbar-default .navbar-collapse{
+	overflow: hidden !important;
+}
