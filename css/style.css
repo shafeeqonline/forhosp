@@ -622,9 +622,9 @@ nav#footer p{
 	padding-right: 10px;
 }
 .navbar-brand img{
-	height:70px;
-	margin-top: -25px;
-	margin-left: -20px;
+	height:60px;
+	margin-top: -20px;
+	margin-left: 0;
 }
 #tf-home .color img{
 	height:55px;
